@@ -380,6 +380,15 @@ class RowComponent extends Component {
    */
   isEditRow = false;
 
+  @computed('groupingRowComponent', 'themeInstance.rowGroupToggleComponent')
+  get rowGroupToggleComponent() {
+    if (this.groupingRowComponent) {
+      return this.groupingRowComponent;
+    }
+
+    return this.themeInstance.rowGroupToggleComponent;
+  }
+
   click() {
     this.clickOnRow(this.index, this.record);
     return false;

@@ -176,4 +176,13 @@ class RowGroupingComponent extends Component {
    * @event toggleGroupedRowsExpands
    */
   toggleGroupedRowsExpands = null;
+
+  @computed('groupingRowComponent', 'themeInstance.rowGroupToggleComponent')
+  get rowGroupToggleComponent() {
+    if (this.groupingRowComponent) {
+      return this.groupingRowComponent;
+    }
+
+    return this.themeInstance.rowGroupToggleComponent;
+  }
 }

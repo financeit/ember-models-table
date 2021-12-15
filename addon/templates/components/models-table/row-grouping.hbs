@@ -5,11 +5,7 @@
     (
       hash
         RowGroupToggle=(
-          component (if
-            this.groupingRowComponent
-            this.groupingRowComponent
-            this.themeInstance.rowGroupToggleComponent
-          )
+          component this.rowGroupToggleComponent
           groupedValue=this.groupedValue
           groupedLength=this.groupedLength
           currentGroupingPropertyName=this.currentGroupingPropertyName
